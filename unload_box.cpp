@@ -148,7 +148,7 @@ int main(int argc, char** argv) {
     ROS_INFO("num parts seen in box = %d",nparts);
     cout<<"enter 1 to remove the other parts: "; //poor-man's breakpoint
     cin>>ans;
-    // For each object in the orphaned partsin the box
+    // Print out the pose of then remove each of the remaining parts in the box
     for (int i=0;i<nparts;i++) {
        ROS_INFO_STREAM("orphaned  parts: "<<orphan_models_wrt_world[i]<<endl);
        model_to_part(orphan_models_wrt_world[i], current_part, inventory_msgs::Part::QUALITY_SENSOR_1);
